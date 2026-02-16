@@ -1,5 +1,8 @@
 # 🏎️ Autonomous Racing Agent (PPO + CNN)
 
+
+
+
 An autonomous driving agent trained to navigate the OpenAI Gym `CarRacing-v3` environment using Deep Reinforcement Learning. The agent processes raw pixel data (Computer Vision) to make steering, acceleration, and braking decisions in real-time.
 
 ## 🧠 Tech Stack
@@ -9,7 +12,7 @@ An autonomous driving agent trained to navigate the OpenAI Gym `CarRacing-v3` en
 * **Environment:** Google Colab (Training), Local Python (Inference)
 
 ## 🎥 Demo
-*(Upload your "Good" video here later! For now, you can leave this blank)*
+https://github.com/user-attachments/assets/bf9b5ea1-4e74-40da-9b75-756541eb13f8
 
 ## 🚀 How It Works
 1.  **Observation:** The agent receives a 96x96px RGB image of the track (top-down view).
@@ -30,3 +33,9 @@ pip install gymnasium[box2d] stable-baselines3 shimmy moviepy
 
 # 3. Run the agent
 python test_driver.py
+
+
+## 📈 Training Progression
+* **0 - 5k Steps:** The agent maximized reward by spinning in circles (local minimum).
+* **45k Steps (Current Status):** The agent has learned to recognize track borders and initiate turns. It currently struggles with speed control on sharp corners, often overshooting.
+* **Next Steps:** Train for 200k+ timesteps and implement a "speed penalty" in the reward function to encourage safer driving.
